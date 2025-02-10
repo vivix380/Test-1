@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise !</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton">Clique ici pour une surprise</button>
+    <audio id="audio" src="https://docs.google.com/uc?export=download&id=YOUR_AUDIO_FILE_ID"></audio>
+    
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            let audio = document.getElementById("audio");
+            audio.volume = 1.0; // Volume au max
+            audio.play();
+        });
+    </script>
+</body>
+</html>
